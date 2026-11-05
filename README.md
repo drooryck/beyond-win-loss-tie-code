@@ -1,6 +1,7 @@
 # Beyond Win, Loss, and Tie in Paired Comparison Models (thesis code)
 
 Code that produces the numerical results and figures in Dries Rooryck’s senior thesis on LMArena paired comparisons with a both-bad outcome.
+Code created with AI and verified by humans, repository was also organized with AI.
 
 All analyses use the **first evaluation turn** only (`FIRST_ORDER=1`), matching the 108,305 comparisons in Chapter 4.
 
