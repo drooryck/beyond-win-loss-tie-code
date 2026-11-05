@@ -13,8 +13,8 @@ _rng = np.random.default_rng(20260804)
 
 
 def first_order(df: pd.DataFrame) -> pd.DataFrame:
-    """With FIRST_ORDER=1, keep only rows with evaluation_order equal to 1."""
-    if os.environ.get("FIRST_ORDER") != "1":
+    """Keep only rows with evaluation_order equal to 1, unless FIRST_ORDER=0 is set."""
+    if os.environ.get("FIRST_ORDER", "1") != "1":
         return df
     order = pd.read_parquet(RAW, columns=["evaluation_order"]).evaluation_order
     return df[order.loc[df.index] == 1].copy()

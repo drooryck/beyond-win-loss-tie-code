@@ -122,7 +122,7 @@ beyond-win-loss-tie-code/
 
 ## Notes
 
-- Environment: `FIRST_ORDER=1` keeps only `evaluation_order == 1`. The Makefile exports this.
+- Environment: every script keeps only `evaluation_order == 1` by default, also when run without the Makefile. Set `FIRST_ORDER=0` to use all evaluation turns.
 - Self-comparisons and `qwen3-coder-480b-a35b-instruct` are dropped (52 competitors).
 - Older draft scripts (`fit_v2`, `eda_try*`, etc.) are **not** included.
 - The seeds are fixed. With the pinned versions on Python 3.11, the saved numbers reproduce the thesis results exactly.
